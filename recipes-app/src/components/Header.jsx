@@ -1,14 +1,11 @@
+import chefIcon from "../../public/imgs/chefIcon.png";
+
 export default function Header() {
   return (
     <header>
       <nav>
         <span className="headerItems">
-          <img
-            className="icon"
-            src="./imgs/chefIcon.png
-"
-            alt="chef icon"
-          />
+          <img className="chefIcon" src={chefIcon} alt="Chef icon" />
           <span>
             <h1>Your recipes</h1>
           </span>
