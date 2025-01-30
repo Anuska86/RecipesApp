@@ -9,8 +9,8 @@ export default function Main() {
 
   function addIngredient(formData) {
     const newIngredient = formData.get("ingredient");
-    console.log(newIngredient)
-    setIngredients(prevIngredients => [...prevIngredients, newIngredient]);
+    console.log(newIngredient);
+    setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
   }
 
   return (
@@ -24,7 +24,19 @@ export default function Main() {
         />
         <button>Add ingredient</button>
       </form>
-      <ul>{ingredientsListItems}</ul>
+      <section>
+        <h2>Ingredients on hand:</h2>
+        <ul className="ingredients-list" aria-live="polite">
+          {ingredientsListItems}
+        </ul>
+        <div className="get-recipe-container">
+          <div>
+            <h3>Ready for cook?</h3>
+            <p>Generate a recipe from your list of ingredients</p>
+          </div>
+          <button>Generate recipe</button>
+        </div>
+      </section>
     </main>
   );
 }
