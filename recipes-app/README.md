@@ -13,3 +13,10 @@ npm create vite@latest my-react-app
 cd recipes-app
 npm install
 npm run dev
+
+
+
+
+INSTALL: 
+
+npm install @huggingface/inference
