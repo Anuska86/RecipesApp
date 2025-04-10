@@ -1,7 +1,8 @@
 import React from "react";
 import IngredientsList from "./IngredientsList";
-import ClaudeRecipe from "./ClaudeRecipe";
+import CheffRecipe from "./ChefRecipe";
 import { getRecipeFromMistral } from "../ai";
+
 
 export default function Main() {
   const [ingredients, setIngredients] = React.useState([]);
@@ -33,7 +34,7 @@ export default function Main() {
         <IngredientsList ingredients={ingredients} fetchRecipe={fetchRecipe} />
       )}
 
-      {recipe && <ClaudeRecipe recipe={recipe} />}
+      {recipe && <CheffRecipe recipe={recipe} />}
     </main>
   );
 }
