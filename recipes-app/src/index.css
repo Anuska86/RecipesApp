@@ -93,6 +93,7 @@ ul.ingredients-list > li {
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 24px;
+  color: #fbf5e5;
 }
 
 .get-recipe-container p {
