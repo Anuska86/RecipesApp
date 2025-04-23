@@ -8,6 +8,8 @@ export default function Main() {
   const [ingredients, setIngredients] = React.useState([]);
 
   const [recipe, setRecipe] = React.useState("");
+  const recipeSection= React.useRef(null);
+  console.log(recipeSection.current);
 
   async function fetchRecipe() {
     const recipeText = await getRecipeFromMistral(ingredients);
@@ -31,7 +33,7 @@ export default function Main() {
         <button>Add ingredient</button>
       </form>
       {ingredients.length > 0 && (
-        <IngredientsList ingredients={ingredients} fetchRecipe={fetchRecipe} />
+        <IngredientsList ref={recipeSection}  ingredients={ingredients} fetchRecipe={fetchRecipe} />
       )}
 
       {recipe && <CheffRecipe recipe={recipe} />}
